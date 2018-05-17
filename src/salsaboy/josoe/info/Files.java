@@ -1,6 +1,7 @@
 package salsaboy.josoe.info;
 
 import salsaboy.josoe.User;
+import javax.swing.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -11,6 +12,7 @@ public class Files {
         try {
             file = new RandomAccessFile(Files.class.getResource("files.dat").toString(), "r");
         } catch (FileNotFoundException e) {
+            new JOptionPane("The file is missing. Please re-install.");
             e.printStackTrace();
         }
     }
