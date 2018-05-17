@@ -13,7 +13,7 @@ public class Files {
         try {
             file = new RandomAccessFile(Files.class.getResource("files.dat").toString(), "r");
         } catch (FileNotFoundException e) {
-            final String message = "A file is missing. Please re-install JOSOE";
+            final String message = "A file is missing. Please re-install JOSOE. Unfortunately, you will lose all files.";
             JOptionPane.showMessageDialog (null, message, "ERROR", JOptionPane.INFORMATION_MESSAGE);
             e.printStackTrace();
         }
