@@ -1,5 +1,6 @@
 package salsaboy.josoe.info;
 
+import salsaboy.josoe.Error;
 import salsaboy.josoe.User;
 import javax.swing.*;
 import java.io.FileNotFoundException;
@@ -12,7 +13,8 @@ public class Files {
         try {
             file = new RandomAccessFile(Files.class.getResource("files.dat").toString(), "r");
         } catch (FileNotFoundException e) {
-            new JOptionPane("The file is missing. Please re-install.");
+            final String message = "A file is missing. Please re-install JOSOE";
+            JOptionPane.showMessageDialog (null, message, "ERROR", JOptionPane.INFORMATION_MESSAGE);
             e.printStackTrace();
         }
     }
@@ -21,7 +23,8 @@ public class Files {
             file.seek((long) (location));
             return file.readLine();
         } else {
-            return "ERR®´å∂";    //This is the error for reading something the user doesn't own.
+            //This is the error for reading something the user doesn't own. No readers should accept this.
+            return Error.FILE_DOESNT_BELONG_TO_USER;
         }
     }
 }
