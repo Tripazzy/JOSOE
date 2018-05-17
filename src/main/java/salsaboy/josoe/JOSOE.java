@@ -13,9 +13,10 @@ public class JOSOE {
             public void draw(Graphics g) {
             }
         };
-        frame.paint(test.getGraphics());
         
         test.setSize(200, 200);
+        test.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         test.setVisible(true);
+        frame.paint(test.getGraphics());
     }
 }
