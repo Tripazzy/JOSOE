@@ -5,13 +5,15 @@ import main.java.salsaboy.josoe.Variables;
 import javax.swing.*;
 import java.awt.*;
 
-public abstract class OEFrame extends Component {
+public abstract class OEFrame extends JPanel {
     public JPanel topBar = new JPanel();
     public boolean isMinimizable = Minimizable.class.isAssignableFrom(this.getClass());
     
     public abstract void draw(Graphics g);
     @Override
     public void paint(Graphics g) {
+        super.paint(g);
+        
         System.out.println("Drawing");
         g.fillRect(getX(), getY(), 30, 30); //FIXME Why won't this run?
         
@@ -25,7 +27,7 @@ public abstract class OEFrame extends Component {
             if (!title.equals(null)) {
                 e.printStackTrace();
             } else {
-                System.out.println("STRING DON'T EXIST");
+                System.out.println("The window has no name.\nIgnoring.");
             }
         }
     }
