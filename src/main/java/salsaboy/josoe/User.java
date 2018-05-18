@@ -1,4 +1,4 @@
-package salsaboy.josoe;
+package main.java.salsaboy.josoe;
 
 import java.util.ArrayList;
 

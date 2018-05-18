@@ -1,6 +1,6 @@
-package salsaboy.josoe;
+package main.java.salsaboy.josoe;
 
-import salsaboy.josoe.ui.OEFrame;
+import main.java.salsaboy.josoe.ui.OEFrame;
 import javax.swing.*;
 import java.awt.*;
 
@@ -10,9 +10,10 @@ public class JOSOE {
         test.setLayout(null);
         OEFrame frame = new OEFrame(100, 100, "") {
             @Override
-            public void draw(Graphics g) {
-            }
+            public void draw(Graphics g) {}
         };
+        
+        test.add(frame);
         
         test.setSize(200, 200);
         test.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

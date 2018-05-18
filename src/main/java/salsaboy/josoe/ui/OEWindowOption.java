@@ -1,4 +1,4 @@
-package salsaboy.josoe.ui;
+package main.java.salsaboy.josoe.ui;
 
 public class OEWindowOption {
     public enum WindowOptions {

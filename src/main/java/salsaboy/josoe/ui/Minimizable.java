@@ -1,4 +1,4 @@
-package salsaboy.josoe.ui;
+package main.java.salsaboy.josoe.ui;
 
 public interface Minimizable {
     int USER = 0;
