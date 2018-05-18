@@ -7,7 +7,12 @@ public interface Minimizable {
     /**
      * The method to run when it is minimized.
      * @param reason The reason it was minimized.
-     *               Should be <code>Minimizable.USER</code>, <code>Minimizable.SYSTEM</code>, or <code>Minimizable.ERROR</code>
      */
     void onMinimize(int reason);
+
+    /**
+     * The method to run when it is unminimized.
+     * @param reason The reason it was unminimized.
+     */
+    void onMaximize(int reason);
 }
