@@ -15,7 +15,7 @@ public abstract class OEFrame extends JPanel {
         super.paint(g);
         
         System.out.println("Drawing");
-        g.fillRect(getX(), getY(), getWidth(), 30); //FIXME Why won't this run?
+        g.fillRect(getX(), getY(), getWidth(), 30);
         
         draw(g);
     }
