@@ -18,6 +18,8 @@ public class JOSOE {
         test.setSize(200, 200);
         test.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         test.setVisible(true);
+        
         frame.paint(test.getGraphics());
+        test.repaint();
     }
 }

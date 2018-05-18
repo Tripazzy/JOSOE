@@ -12,6 +12,7 @@ public abstract class OEFrame extends Component {
     public abstract void draw(Graphics g);
     @Override
     public void paint(Graphics g) {
+        System.out.println("Drawing");
         g.fillRect(getX(), getY(), 30, 30); //FIXME Why won't this run?
         
         draw(g);
