@@ -1,7 +1,7 @@
-package main.java.salsaboy.josoe.ui;
+package salsaboy.josoe.ui;
 
 import com.sun.istack.internal.Nullable;
-import main.java.salsaboy.josoe.Variables;
+import salsaboy.josoe.Variables;
 import javax.swing.*;
 import java.awt.*;
 
