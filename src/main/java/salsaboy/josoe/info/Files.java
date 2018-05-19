@@ -1,7 +1,7 @@
-package main.java.salsaboy.josoe.info;
+package salsaboy.josoe.info;
 
-import main.java.salsaboy.josoe.Error;
-import main.java.salsaboy.josoe.User;
+import salsaboy.josoe.Error;
+import salsaboy.josoe.User;
 import javax.swing.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
