@@ -7,7 +7,9 @@ import java.awt.*;
 
 public abstract class OEFrame extends JPanel {
     public JPanel topBar = new JPanel();
-    public boolean isMinimizable = Minimizable.class.isAssignableFrom(this.getClass()); //This should still work on sub-classes
+
+    public boolean isMinimizable = Minimizable.class.isAssignableFrom(this.getClass()); //These should still work on sub-classes
+    public boolean isFullscreenable = Fullscreenable.class.isAssignableFrom(this.getClass());
     
     public abstract void draw(Graphics g);
     @Override
