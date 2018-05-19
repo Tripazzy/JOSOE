@@ -3,7 +3,6 @@ package salsaboy.josoe.ui;
 import java.awt.*;
 
 public class ThickRect extends Component {
-    private boolean isForced = true;
     private int x, y, width, height, thickness;
     public ThickRect(int x, int y, int width, int height, int thickness) {
         this.x = x;
@@ -14,12 +13,13 @@ public class ThickRect extends Component {
     }
     public void draw(Graphics g) {
         //X Y WIDTH HEIGHT
-                                                                   ///////////////
-        g.fillRect(x, y, thickness, height);                       //Left side  //
-        g.fillRect(width, y, thickness, height);                   //Right side //
-        g.fillRect(x, y, width, thickness);                        //Top side   //
-        g.fillRect(height - thickness, y, width, thickness);    //Bottom side//
-                                                                   ///////////////
-        System.out.printf("");
+        for (int i = 0; i < thickness; i++) {
+            g.drawRect(x + i, y + i, width - (i * 2), height - (i * 2));
+            System.out.println(x + i);
+            System.out.println(y + i);
+            System.out.println(width - (i * 2));
+            System.out.println(height - (i * 2));
+            System.out.println("\nNext");
+        }
     }
 }

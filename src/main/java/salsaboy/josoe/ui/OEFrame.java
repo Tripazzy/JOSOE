@@ -21,8 +21,6 @@ public abstract class OEFrame extends JPanel {
     public abstract void draw(Graphics g);
     @Override
     public void paint(Graphics g) {
-        super.paint(g);
-        
         ThickRect rect = new ThickRect(0, 0, getWidth(), 30, 5);
         rect.draw(g);
         
