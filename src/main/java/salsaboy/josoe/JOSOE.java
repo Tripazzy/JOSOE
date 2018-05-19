@@ -14,9 +14,7 @@ public class JOSOE {
         };
         OEFrame frame1 = new OEFrame(100, 100, "") {
             @Override
-            public void draw(Graphics g) {
-            
-            }
+            public void draw(Graphics g) {}
         };
     
         test.add(frame);
@@ -31,6 +29,6 @@ public class JOSOE {
             if (args[0].equals("-debug")) {
                 test();
             }
-        } catch (ArrayIndexOutOfBoundsException e) {} //This is so that it won't cause an issue.
+        } catch (ArrayIndexOutOfBoundsException e) {} //This is so that no args won't cause an issue.
     }
 }
