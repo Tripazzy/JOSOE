@@ -6,16 +6,23 @@ import javax.swing.*;
 import java.awt.*;
 
 public abstract class OEFrame extends JPanel {
-    public JPanel topBar = new JPanel();
-
+    private String title;
+    public void setTitle(String text) {
+        this.title = text;
+    }
+    
     public boolean isMinimizable = Minimizable.class.isAssignableFrom(this.getClass()); //These should still work on sub-classes
     public boolean isFullscreenable = Fullscreenable.class.isAssignableFrom(this.getClass());
     
+    /**
+     * This is the equivalent of <code>paint(Graphics)</code> except for the panel the program is defining.
+     * @param g The Graphics object to draw with
+     */
     public abstract void draw(Graphics g);
     @Override
     public void paint(Graphics g) {
-        System.out.println("Drawing");
-        g.fillRect(0, 0, getWidth(), 30);
+        ThickRect rect = new ThickRect(0, 0, getWidth(), 30, 5);
+        rect.draw(g);
         
         draw(g);
     }
