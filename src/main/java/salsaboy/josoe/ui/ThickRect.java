@@ -15,11 +15,6 @@ public class ThickRect extends Component {
         //X Y WIDTH HEIGHT
         for (int i = 0; i < thickness; i++) {
             g.drawRect(x + i, y + i, width - (i * 2), height - (i * 2));
-            System.out.println(x + i);
-            System.out.println(y + i);
-            System.out.println(width - (i * 2));
-            System.out.println(height - (i * 2));
-            System.out.println("\nNext");
         }
     }
 }
