@@ -14,10 +14,8 @@ public abstract class OEFrame extends JPanel {
     public abstract void draw(Graphics g);
     @Override
     public void paint(Graphics g) {
-        super.paint(g);
-        
         System.out.println("Drawing");
-        g.fillRect(getX(), getY(), getWidth(), 30);
+        g.fillRect(0, 0, getWidth(), 30);
         
         draw(g);
     }
