@@ -12,11 +12,9 @@ public class JOSOE {
             @Override
             public void draw(Graphics g) {}
         };
-        OEFrame frame1 = new OEFrame(100, 100, "") {
+        OEFrame frame1 = new OEFrame(100, 100, "") {    //FIXME It doesn't go where it should.
             @Override
-            public void draw(Graphics g) {
-        
-            }
+            public void draw(Graphics g) {}
         };
         
         test.add(frame);
