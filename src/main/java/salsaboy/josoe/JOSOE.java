@@ -1,6 +1,6 @@
-package salsaboy.josoe;
+package main.java.salsaboy.josoe;
 
-import salsaboy.josoe.ui.OEFrame;
+import main.java.salsaboy.josoe.ui.OEFrame;
 import javax.swing.*;
 import java.awt.*;
 
