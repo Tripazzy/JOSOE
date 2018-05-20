@@ -21,7 +21,7 @@ public abstract class OEFrame extends JPanel {
     public abstract void draw(Graphics g);
     @Override
     public void paint(Graphics g) {
-        ThickRect rect = new ThickRect(0, 0, getWidth(), 30, 5);
+        ThickRoundRect rect = new ThickRoundRect(0, 0, getWidth(), 30, 5);
         rect.setBorderColour(Color.BLUE);
         rect.setBodyColour(Color.LIGHT_GRAY);
         rect.draw(g);
