@@ -23,14 +23,11 @@ public class ThickRoundRect extends Component {
         this.thickness = thickness;
     }
     public void draw(Graphics g) {
-        for (int i = 0; i <= thickness; i++) {
-            if (i == thickness) {
-                g.setColor(bodyColour);
-                g.fillRoundRect(x + i, y + i, width - (i * 2), height - (i * 2), 10, 10);
-            } else {
-                g.setColor(borderColour);
-                g.drawRoundRect(x + i, y + i, (width - (i * 2)) - 1, (height - (i * 2)) - 1, 10, 10);
-            }
-        }
+        g.setColor(borderColour);
+        g.fillRoundRect(x, y, width, height, 10, 10);
+        
+        g.setColor(bodyColour);
+        g.fillRoundRect(x + thickness, y + thickness, width - (thickness * 2), height - (thickness * 2),
+            10, 10);
     }
 }
